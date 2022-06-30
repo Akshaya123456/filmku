@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, FlatList} from 'react-native';
+import {View, FlatList, TouchableOpacity} from 'react-native';
 
 import FastImage from 'react-native-fast-image';
 
@@ -133,6 +133,8 @@ function Details(props) {
     );
   };
 
+  const handleBack = () => props.navigation.goBack()
+
   return (
     <Container>
       {isLoading ? (
@@ -159,10 +161,12 @@ function Details(props) {
           <ImagePositionWrapper>
             <ImageRow>
               <BackView>
-                <Back></Back>
+                <TouchableOpacity onPress={handleBack}>
+                    <Back />
+                </TouchableOpacity>
               </BackView>
               <MenuView>
-                <Menu></Menu>
+                    <Menu />
               </MenuView>
             </ImageRow>
             <PlayView>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { TouchableOpacity } from 'react-native';
 
 import Menu from '../../assets/svgs/drawer.svg';
 import Notification from '../../assets/svgs/notification.svg';
@@ -14,10 +15,12 @@ import {
 function Header(props) {
   const {title} = props;
 
+  const handleDrawer = () => props.navigation.toggleDrawer();
+
   return (
     <HeaderWrapper>
       <MenuWrapper>
-        <Menu />
+        <TouchableOpacity onPress={handleDrawer}><Menu /></TouchableOpacity>
       </MenuWrapper>
       <TitleWrapper>
         <TitleText allowFontScaling={false}>{title}</TitleText>

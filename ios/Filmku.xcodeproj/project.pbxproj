@@ -13,7 +13,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		18CCF053286CD52300D555A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18CCF052286CD52300D555A2 /* GoogleService-Info.plist */; };
+		186D310B286D609300F37F55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 186D310A286D609300F37F55 /* GoogleService-Info.plist */; };
 		1BF3F05230914DE896DD4891 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 241A9B71F52F4D4DA0208347 /* Mulish-Regular.ttf */; };
 		2E22B63E5CE84E158E2DF434 /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BEEF19AFECBD4DD0A6A9D50B /* Merriweather-Black.ttf */; };
 		5479D4761BB14406A9F0A162 /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88FAF4C3F14A4D2A82010B08 /* Mulish-Bold.ttf */; };
@@ -47,7 +47,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Filmku/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Filmku/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Filmku/main.m; sourceTree = "<group>"; };
-		18CCF052286CD52300D555A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		186D310A286D609300F37F55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		241A9B71F52F4D4DA0208347 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mulish-Regular.ttf"; path = "../assets/fonts/Mulish-Regular.ttf"; sourceTree = "<group>"; };
 		50E898481F5DD5BF384FA446 /* Pods-Filmku-FilmkuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filmku-FilmkuTests.release.xcconfig"; path = "Target Support Files/Pods-Filmku-FilmkuTests/Pods-Filmku-FilmkuTests.release.xcconfig"; sourceTree = "<group>"; };
 		7D67A5644EE34F5FB9881D4E /* Merriweather-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Light.ttf"; path = "../assets/fonts/Merriweather-Light.ttf"; sourceTree = "<group>"; };
@@ -122,6 +122,7 @@
 		13B07FAE1A68108700A75B9A /* Filmku */ = {
 			isa = PBXGroup;
 			children = (
+				186D310A286D609300F37F55 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -163,7 +164,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				18CCF052286CD52300D555A2 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* Filmku */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* FilmkuTests */,
@@ -197,7 +197,6 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				96B15EE00F86009B5FBEA3AC /* [CP] Embed Pods Frameworks */,
 				9677A7B92D6E580B0116BAE1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -220,7 +219,6 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				A468F231CEB296BA6E8C99C2 /* [CP] Embed Pods Frameworks */,
 				3385E244BA90653F2F8A9EC9 /* [CP] Copy Pods Resources */,
 				13556D6CF85342339E03393D /* [CP-User] [RNFB] Core Configuration */,
 			);
@@ -286,7 +284,7 @@
 				2E22B63E5CE84E158E2DF434 /* Merriweather-Black.ttf in Resources */,
 				E25ADDC042A845A98167284B /* Merriweather-Bold.ttf in Resources */,
 				ED22BBD005AA435BA4DF34E6 /* Merriweather-Light.ttf in Resources */,
-				18CCF053286CD52300D555A2 /* GoogleService-Info.plist in Resources */,
+				186D310B286D609300F37F55 /* GoogleService-Info.plist in Resources */,
 				0836DABFDCF14896BA33E640 /* Merriweather-Regular.ttf in Resources */,
 				5479D4761BB14406A9F0A162 /* Mulish-Bold.ttf in Resources */,
 				CA4724DF66854945AE1B2094 /* Mulish-Light.ttf in Resources */,
@@ -380,40 +378,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Filmku-FilmkuTests/Pods-Filmku-FilmkuTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		96B15EE00F86009B5FBEA3AC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Filmku-FilmkuTests/Pods-Filmku-FilmkuTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Filmku-FilmkuTests/Pods-Filmku-FilmkuTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Filmku-FilmkuTests/Pods-Filmku-FilmkuTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A468F231CEB296BA6E8C99C2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Filmku/Pods-Filmku-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Filmku/Pods-Filmku-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Filmku/Pods-Filmku-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE6778DF2C616BC307D41518 /* [CP] Check Pods Manifest.lock */ = {

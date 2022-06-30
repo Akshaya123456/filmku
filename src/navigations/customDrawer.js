@@ -1,31 +1,44 @@
 import React from 'react';
 import {DrawerItem} from '@react-navigation/drawer';
-import {
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  TouchableOpacity,
-  View,
-  Linking,
-  Platform,
-  Alert,
-} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import {SafeAreaView, ScrollView, StyleSheet, Alert} from 'react-native';
+import {CommonActions, StackActions} from '@react-navigation/native';
 
 export default function CustomDrawer({navigation, state}) {
+  const onLogOut = () => {
+    Alert.alert(
+      'Sign out?',
+      'You can always access your content by signing back in',
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: 'Sign out',
+          style: 'destructive',
+          onPress: () => {
+            navigation.dispatch(
+              CommonActions.reset({
+                index: 0,
+                routes: [{name: 'auth'}],
+              }),
+            );
+          },
+        },
+      ],
+      {cancelable: false},
+    );
+  };
+
   return (
-    <View style={styles.root}>
+    <SafeAreaView style={styles.root}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1, paddingBottom: 20}}>
-        <DrawerIt
-          label={'Logout'}
-          icon="logout"
-          onPress={() => console.log('test')}
-        />
+        <DrawerIt label={'Logout'} icon="logout" onPress={onLogOut} />
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -33,14 +46,6 @@ function DrawerIt({icon, label, active, ...other}) {
   return (
     <DrawerItem
       label={label}
-      icon={() => (
-        <Icon
-          name={icon}
-          size={26}
-          color={active ? '#110E47' : '#000000'}
-          style={{paddingLeft: 10}}
-        />
-      )}
       labelStyle={[styles.drawerLabel, active && {color: "'#110E47'"}]}
       style={[styles.drawerStyle, active && {backgroundColor: '#BCBCCD'}]}
       {...other}
@@ -58,7 +63,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   drawerLabel: {
-    marginLeft: -10,
+    marginLeft: 20,
     color: '#000',
     fontSize: 15,
   },
